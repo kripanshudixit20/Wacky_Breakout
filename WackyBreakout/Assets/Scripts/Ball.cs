@@ -15,13 +15,19 @@ public class Ball : MonoBehaviour
     [SerializeField]
     float delay;
 
+    [SerializeField]
+    float speedToIncrease;
+
+    Rigidbody2D rb2d;
+
     /// <summary>
     /// Use this for initialization
     /// </summary>
     void Start()
     {
         StartCoroutine(Wait(delay));
-        
+
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     /// <summary>
@@ -30,8 +36,6 @@ public class Ball : MonoBehaviour
     /// <param name="direction">direction</param>
     public void SetDirection(Vector2 direction)
     {
-        // get current rigidbody speed
-        Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
         float speed = rb2d.velocity.magnitude;
         rb2d.velocity = direction * speed;
     }
@@ -50,7 +54,11 @@ public class Ball : MonoBehaviour
         float angle = -90 * Mathf.Deg2Rad;
         Vector2 force = new Vector2(ballImpusleSpeed * Mathf.Cos(angle), ballImpusleSpeed *
             Mathf.Sin(angle));
-        GetComponent<Rigidbody2D>().AddForce(force);
+        rb2d.AddForce(force);
+    }
+    public void IncreaseSpeed()
+    {
+        rb2d.AddForce(speedToIncrease * rb2d.velocity);
     }
 
     IEnumerator Wait(float delay)

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpeedUpBlock : MonoBehaviour
 {
+    [SerializeField]
+    GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,20 @@ public class SpeedUpBlock : MonoBehaviour
     void Update()
     {
         
+    }
+    /// <summary>
+    /// Destroys the block on collision with a ball and generates a power up
+    /// </summary>
+    /// <param name="coll">Coll.</param>
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Ball"))
+        {
+            Destroy(gameObject);
+            Instantiate(particles, gameObject.transform.position, Quaternion.identity);
+
+            Ball ballScript = coll.gameObject.GetComponent<Ball>();
+            ballScript.IncreaseSpeed();
+        }
     }
 }

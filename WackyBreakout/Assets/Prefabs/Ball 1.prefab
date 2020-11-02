@@ -144,5 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa59e7837f0179845a6c0ee665eaa107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballImpusleSpeed: 500
+  ballImpusleSpeed: 300
   delay: 2
+  speedToIncrease: 50
