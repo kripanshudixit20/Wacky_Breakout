@@ -30,7 +30,7 @@ public class ExtraBallPowerUp : MonoBehaviour
             Destroy(gameObject);
             Instantiate(particles, gameObject.transform.position, Quaternion.identity);
 
-            Camera.main.GetComponent<BallSpawner>().SpawnBall();
+            Camera.main.GetComponent<Spawner>().SpawnBall();
         }
     }
 }

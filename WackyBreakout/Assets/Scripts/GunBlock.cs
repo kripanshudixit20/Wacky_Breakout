@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GunBlock : MonoBehaviour
 {
+    [SerializeField]
+    GameObject particles;
+
+    [SerializeField]
+    GameObject bullet;
+
+    [SerializeField]
+    GameObject gunPaddle;
+
     // Start is called before the first frame update
     void Start()
     {

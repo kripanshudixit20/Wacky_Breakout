@@ -44,7 +44,7 @@ public class Ball : MonoBehaviour
         float halfColliderHeight = gameObject.GetComponent<BoxCollider2D>().size.y / 2;
         if (transform.position.y - halfColliderHeight < ScreenUtils.ScreenBottom)
         {
-            Camera.main.GetComponent<BallSpawner>().SpawnBall();
+            Camera.main.GetComponent<Spawner>().SpawnBall();
         }
         Destroy(gameObject);
     }
