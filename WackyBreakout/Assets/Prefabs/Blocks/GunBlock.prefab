@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 963513684841575326}
   - component: {fileID: 8750758178263151327}
   - component: {fileID: 1955840800480173251}
-  - component: {fileID: -1834637725512040248}
+  - component: {fileID: -3993576176307999720}
   m_Layer: 0
   m_Name: GunBlock
   m_TagString: Untagged
@@ -130,7 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.89, y: 0.84}
   m_EdgeRadius: 0
---- !u!114 &-1834637725512040248
+--- !u!114 &-3993576176307999720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,3 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0520cf9fcde8fc84896d3c474bf4f56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 5684928047352757215, guid: d513097795218444d9bb67d9c1d2da5c, type: 3}
+  bullet: {fileID: 5197346135880934372, guid: ce29ba29ab628f548921152e9a114f02, type: 3}
+  gunPaddle: {fileID: 7574081236106026353, guid: ae6639c11b439494b84aa40ef88f5d57, type: 3}
