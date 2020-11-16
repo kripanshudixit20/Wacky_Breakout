@@ -108,4 +108,8 @@ public class Paddle : MonoBehaviour
         ContactPoint2D[] contacts = coll.contacts;
         return Mathf.Abs(contacts[0].point.y - contacts[1].point.y) < tolerance;
     }
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }

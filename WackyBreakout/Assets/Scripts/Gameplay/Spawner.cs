@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     GameObject gunPaddle;
 
+    //Paddle paddle;
+
     private void Awake()
     {
         //SpawnBall();
@@ -37,8 +39,7 @@ public class Spawner : MonoBehaviour
     }
     public void DestroyPaddle()
     {
-        DestroyImmediate(normalPaddle, true);
-
+        //paddle.Destroy();
         Instantiate(gunPaddle, new Vector2(0f, -4.5f), Quaternion.identity);
     }
 }
